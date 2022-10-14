@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page_header">
+    <header>
       <nav class="navigation">
           <ul class="navigation_list">
               <li class="navigation_item">
@@ -16,7 +16,7 @@
               </li>
               <li class="navigation_item">
                 Каталог
-                <img src="./images/header/catalog.svg" width="16" height="16" alt="Раскрыть каталог">
+                <img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог">
                   <ul class="catalog_link">
                     <li class="catalog_item">
                       <a><b>Новинки</b></a>
@@ -40,28 +40,28 @@
             </li>
           </ul>
 
-          <ul class="navigation_list navigation_user">
+          <ul class="navigation_user">
             <li class="navigation_item">
               <a class="navigation_link number" href="tel:78005558628">
                 7 800 555-86-28
               </a>
             </li>
-            <li class="navigation_item">
-              <a class="navigation_link" href="#">
+            <li class="navigation_item item_background">
+              <a class="navigation_link search" href="#">
                 <span class="visually-hidden">
                   Поиск
                 </span>
                 <img src="./images/header/search.svg" width="13" height="13" alt="Знак поиска">
               </a>
             </li>
-            <li class="navigation_item">
-              <a class="navigation_link" href="#">
+            <li class="navigation_item item_background">
+              <a class="navigation_link not_search" href="#">
                 <img src="./images/header/login.svg" width="13" height="13" alt="Знак входа в аккаунт">
                 Вход
               </a>
             </li>
-            <li class="navigation_item">
-              <a class="navigation_link" href="#">
+            <li class="navigation_item item_background">
+              <a class="navigation_link not_search" href="#">
                 <img src="./images/header/cart.svg" width="14" height="14" alt="Корзина">
                 2 товара
               </a>
@@ -80,7 +80,8 @@
             и молока с вкуснейшим клубничным джемом – <br>
             это идеальный десерт для всей семьи. </p>
             <button class="btn btn_white" type="button">Заказать</button>
-            <img class="" src="./images/strawberry_slide.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом">
+            <div class="substrate"></div>
+            <img src="./images/strawberry_slide.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом">
           </li>
           <li class="main_index_item slide2">
             <h1>Сливочное мороженое<br>
@@ -89,7 +90,8 @@
               вкусом подарит вам свежесть и наслаждение<br>
               даже в самый жаркий летний день</p>
             <button class="btn btn_white" type="button">Заказать</button>
-            <img class="" src="./images/banana_slide.png" width="306" height="507" alt="Сливочное мороженое со вкусом банана">
+            <div class="substrate"></div>
+            <img src="./images/banana_slide.png" width="306" height="507" alt="Сливочное мороженое со вкусом банана">
           </li>
           <li class="main_index_item slide3">
             <h1>Карамельный пломбир<br>
@@ -98,7 +100,8 @@
               топпингом и кусочками зефира завоюет<br>
               сердца сладкоежек всех возрастов.</p>
             <button class="btn btn_white" type="button">Заказать</button>
-            <img class="" src="./images/caramel_slide.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу">
+            <div class="substrate"></div>
+            <img src="./images/caramel_slide.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу">
           </li>
         </ol>
         <div class="switch_slide">
@@ -109,40 +112,44 @@
             <img class="right_arrow" src="./images/arrow_right.svg" width="38" height="38" alt="Следующее мороженое">
           </button>
         </div>
-        <div class="radio_slide">
-          <button type="button" class="btn_radio_slide active_radio_slide"></button>
-          <button type="button" class="btn_radio_slide"></button>
-          <button type="button" class="btn_radio_slide"></button>
-        </div>
-        <div class="social">
-                <a href="https://t.me/htmlacademy"><img src="./images/social_network/telegram.png" width="24" height="24" alt="Телеграмм"></a>
-                <a href=" https://vk.com/htmlacademy"><img src="./images/social_network/wk.png" width="24" height="24" alt="Вконтакте"></a>
-                <a href="https://www.youtube.com/user/htmlacademyru"><img src="./images/social_network/youtube.png" width="24" height="24" alt="Ютуб"></a>
+
+        <div class="radio_slide_and_social">
+          <div class="radio_slide">
+            <button type="button" class="btn_radio_slide active_radio_slide"></button>
+            <button type="button" class="btn_radio_slide"></button>
+            <button type="button" class="btn_radio_slide"></button>
+          </div>
+          <div class="slider_social">
+                  <a href="https://t.me/htmlacademy"><img src="./images/social_network/telegram.png" width="24" height="24" alt="Телеграмм"></a>
+                  <a href=" https://vk.com/htmlacademy"><img src="./images/social_network/wk.png" width="24" height="24" alt="Вконтакте"></a>
+                  <a href="https://www.youtube.com/user/htmlacademyru"><img src="./images/social_network/youtube.png" width="24" height="24" alt="Ютуб"></a>
+          </div>
         </div>
       </section>
 
       <section class="bounty">
         <h2>Заказывайте мороженое<br>и получайте подарки!</h2>
-        <div class="banner">
-          <div class="in_banner_1">
-            <div class="padding_bounty">
-              <h3>Малинка даром!</h3>
-              <p>При покупке 2 кг любого фруктового<br>
-                мороженого добавим в ваш заказ банку<br>
-                малинового варенья бесплатно.</p>
-              <button class="btn btn_white" type="button">Хочу подарок</button>
+        <div class="bounty_display">
+          <div class="banner">
+            <div class="in_banner banner_1">
+              <div class="padding_bounty">
+                <h3>Малинка даром!</h3>
+                <p>При покупке 2 кг любого фруктового<br>
+                  мороженого добавим в ваш заказ банку<br>
+                  малинового варенья бесплатно.</p>
+                <button class="btn btn_white" type="button">Хочу подарок</button>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="banner">
-          <div class="in_banner_2">
-            <div class="padding_bounty">
-              <h3>Маршмеллоу даром!</h3>
-              <p>При покупке 2 кг пломбира добавим<br>
-                в ваш заказ упаковку нежных<br>
-                зефирок совершенно бесплатно.</p>
-              <button class="btn btn_white" type="button">Хочу подарок</button>
+          <div class="banner">
+            <div class="in_banner banner_2">
+              <div class="padding_bounty">
+                <h3>Маршмеллоу даром!</h3>
+                <p>При покупке 2 кг пломбира добавим<br>
+                  в ваш заказ упаковку нежных<br>
+                  зефирок совершенно бесплатно.</p>
+                <button class="btn btn_white" type="button">Хочу подарок</button>
+              </div>
             </div>
           </div>
         </div>
@@ -156,40 +163,48 @@
             <h4>Малинка</h4>
             <p>Сливочное мороженое<br>
               с малиновым джемом</p>
-            <p><b>310 ₽/кг</b></p>
+            <div class="flavors_p_and_cart">
+            <p class="flavors_p_padding">310 ₽/кг</p>
             <button class="btn_add_cart" type="button">
-              <img src="./images/cart_pink.svg" width="16" height="16" alt="Добавить в корзину">
+              <img src="./images/cart_pink.svg" width="32" height="32" alt="Добавить в корзину">
             </button>
+          </div>
           </li>
           <li class="ice_cream_item">
             <img src="./images/flavors/flavors_2.jpg" width="168" height="168" alt="Вкус фисташки">
             <h4>Фисташка</h4>
             <p>Фисташковый пломбир<br>
               с кусочками шоколада</p>
-            <p><b>340 ₽/кг</b></p>
-            <button class="btn_add_cart" type="button">
-              <img src="./images/cart_pink.svg" width="16" height="16" alt="Добавить в корзину">
-            </button>
+            <div class="flavors_p_and_cart">
+              <p class="flavors_p_padding">340 ₽/кг</p>
+              <button class="btn_add_cart" type="button">
+                <img src="./images/cart_pink.svg" width="32" height="32" alt="Добавить в корзину">
+              </button>
+            </div>
           </li>
           <li class="ice_cream_item">
             <img src="./images/flavors/flavors_3.jpg" width="168" height="168" alt="Вкус черники">
             <h4>Черника</h4>
             <p>Крем-брюле<br>
               с черничным джемом</p>
-            <p><b>330 ₽/кг</b></p>
-            <button class="btn_add_cart" type="button">
-              <img src="./images/cart_pink.svg" width="16" height="16" alt="Добавить в корзину">
-            </button>
+            <div class="flavors_p_and_cart">
+              <p class="flavors_p_padding">330 ₽/кг</p>
+              <button class="btn_add_cart" type="button">
+                <img src="./images/cart_pink.svg" width="32" height="32" alt="Добавить в корзину">
+              </button>
+            </div>
           </li>
           <li class="ice_cream_item">
             <img src="./images/flavors/flavors_4.jpg" width="168" height="168" alt="Вкус бабл-гама">
             <h4>Бабл-Гам</h4>
             <p>Ванильный пломбир<br>
               со сладкой посыпкой</p>
-            <p><b>320 ₽/кг</b></p>
-            <button class="btn_add_cart" type="button">
-              <img src="./images/cart_pink.svg" width="16" height="16" alt="Добавить в корзину">
-            </button>
+            <div class="flavors_p_and_cart">
+              <p class="flavors_p_padding">320 ₽/кг</p>
+              <button class="btn_add_cart" type="button">
+                <img src="./images/cart_pink.svg" width="32" height="32" alt="Добавить в корзину">
+              </button>
+            </div>
           </li>
         </ul>
       </section>
@@ -200,7 +215,7 @@
           <div class="advantage_list">
             <h2>Магазин Глейси – это онлайн и офлайн-магазин по продаже<br>
               мороженого собственного производства на развес</h2>
-            <ul>
+            <ul class="advantage_list_ul">
               <li class="advantage_item">
                 <img class="advantage_img" src="./images/advantage/ice_cream.svg" width="48" height="48" alt="Собственное производство">
                 <p>Всё наше мороженое изготавливается на собственном<br>
@@ -267,25 +282,17 @@
           <p>Укажите адрес и дату доставки, и мы свяжемся<br>
             с вами, чтобы подтвердить заказ.</p>
           <form action="https://echo.htmlacademy.ru/" method="post">
-            <table>
-              <tr>
-                <td>
-                  <label for="date">Дата</label>
-                  <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения">
-                </td>
-                <td>
-                  <label for="phone">Телефон</label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input class="input date" type="text" placeholder="01.04.2020" id="date" required>
-                </td>
-                <td>
-                  <input class="input tel" type="tel" placeholder="+7 800 999-00-00" id="phone">
-                </td>
-              </tr>
-            </table>
+            <div class="date_and_phone">
+              <div class="div_date">
+                <label for="date">Дата</label>
+                <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
+                <input class="input date" type="text" placeholder="01.04.2020" id="date" required>
+              </div>
+              <div class="div_phone">
+                <label for="phone">Телефон</label><br>
+                <input class="input tel" type="tel" placeholder="+7 800 999-00-00" id="phone">
+              </div>
+            </div>
             <label for="address">Адрес</label>
             <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
             <input class="input address" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="address" required>
@@ -310,37 +317,45 @@
     </main>
 
     <footer class="page-footer">
-      <section class="social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social_list">
-          <li class="social_item">
-            <a href="https://t.me/htmlacademy"><img src="./images/social_network/telegram.png" width="24" height="24" alt="Телеграмм"></a>
-          </li>
-          <li class="social_item">
-            <a href=" https://vk.com/htmlacademy"><img src="./images/social_network/wk.png" width="24" height="24" alt="Вконтакте"></a>
-          </li>
-          <li class="social_item">
-            <a href="https://www.youtube.com/user/htmlacademyru"><img src="./images/social_network/youtube.png" width="24" height="24" alt="Ютуб"></a>
-          </li>
-        </ul>
-      </section>
-      <section class="links">
-        <h2 class="visually-hidden">Ссылки</h2>
-        <ul class="links_list">
-          <li class="links_item">
-            <img src="./images/heart.svg" alt="Вектор сердце">
-            <b>Для поставщиков</b>
-          </li>
-          <li class="links_item">Наши документы</li>
-          <li class="links_item">О производстве</li>
-          <li class="links_item">Экологические стандарты</li>
-        </ul>
-      </section>
-      <section class="sources">
-        <h2 class="visually-hidden">Источник</h2>
-        <a href="https://htmlacademy.ru/"><img src="./images/logo_htmlacademy.svg" width="93" height="27" alt="Логотип_Академии"></a>
-        <p>Сделано в <a href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
-      </section>
+      <div class="page-footer_container">
+        <section class="footer_social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social_list">
+            <li class="social_item">
+              <a href="https://t.me/htmlacademy"><img src="./images/social_network/telegram.png" width="24" height="24" alt="Телеграмм"></a>
+            </li>
+            <li class="social_item">
+              <a href=" https://vk.com/htmlacademy"><img src="./images/social_network/wk.png" width="24" height="24" alt="Вконтакте"></a>
+            </li>
+            <li class="social_item">
+              <a href="https://www.youtube.com/user/htmlacademyru"><img src="./images/social_network/youtube.png" width="24" height="24" alt="Ютуб"></a>
+            </li>
+          </ul>
+        </section>
+        <section class="links">
+          <h2 class="visually-hidden">Ссылки</h2>
+          <ul class="links_list">
+            <div class="column_1">
+              <li class="links_item">
+                <img src="./images/heart.svg" alt="Вектор сердце">
+              </li>
+            </div>
+            <div class="column_2">
+              <li class="links_item"><b>Для поставщиков</b></li>
+              <li class="links_item">О производстве</li>
+            </div>
+            <div  class="column_3">
+              <li class="links_item">Наши документы</li>
+              <li class="links_item">Экологические стандарты</li>
+           </div>
+          </ul>
+        </section>
+        <section class="sources">
+          <h2 class="visually-hidden">Источник</h2>
+          <a href="https://htmlacademy.ru/"><img src="./images/logo_htmlacademy.svg" width="93" height="27" alt="Логотип_Академии"></a>
+          <p>Сделано в <a href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
