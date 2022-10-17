@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+
+    <div class="body_container">
     <header>
       <nav class="navigation">
           <ul class="navigation_list">
@@ -14,10 +16,9 @@
                     <img class="logo" src="./images/header/logo.svg" width="137" height="56" alt="Логотип">
                   </a>
               </li>
-              <li class="navigation_item">
-                Каталог
-                <img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог">
-                  <ul class="catalog_link">
+              <li class="navigation_item"><a href="catalog.html">Каталог</a>
+                <button class="btn_catalog_list" type="button"><img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог"></button>
+                  <ul class="catalog_link visually-hidden">
                     <li class="catalog_item">
                       <a><b>Новинки</b></a>
                     </li>
@@ -80,11 +81,11 @@
           <li class="inner_header_item">
             <img src="./images/path.svg" width="12" height="12" alt="Вектор вправо">
           </li>
-          <li class="inner_header_item">Каталог</li>
+          <li class="inner_header_item"><a href="#">Каталог</a></li>
           <li class="inner_header_item">
             <img src="./images/path.svg" width="12" height="12" alt="Вектор вправо">
           </li>
-          <li class="inner_header_item underline">Сливочное мороженое</li>
+          <li class="inner_header_item underline"><a href="catalog.html">Сливочное мороженое</a></li>
         </ul>
         <h1 class="inner_header_title">Сливочное мороженое</h1>
       </header>
@@ -375,21 +376,21 @@
         </section>
         <section class="links">
           <h2 class="visually-hidden">Ссылки</h2>
-          <ul class="links_list">
-            <div class="column_1">
+          <div class="links_list">
+            <ul class=" column_1">
               <li class="links_item">
                 <img src="./images/heart.svg" alt="Вектор сердце">
               </li>
-            </div>
-            <div class="column_2">
+            </ul>
+            <ul class="column_2">
               <li class="links_item"><b>Для поставщиков</b></li>
               <li class="links_item">О производстве</li>
-            </div>
-            <div  class="column_3">
+            </ul>
+            <ul class="column_3">
               <li class="links_item">Наши документы</li>
               <li class="links_item">Экологические стандарты</li>
-           </div>
-          </ul>
+            </ul>
+          </div>
         </section>
         <section class="sources">
           <h2 class="visually-hidden">Источник</h2>
@@ -398,5 +399,7 @@
         </section>
       </div>
     </footer>
+    </div>
+
   </body>
 </html>

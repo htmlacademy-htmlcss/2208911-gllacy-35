@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+
+    <div class="body_container">
     <header>
       <nav class="navigation">
           <ul class="navigation_list">
@@ -14,10 +16,9 @@
                     <img class="logo" src="./images/header/logo.svg" width="137" height="56" alt="Логотип">
                   </a>
               </li>
-              <li class="navigation_item">
-                Каталог
-                <img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог">
-                  <ul class="catalog_link">
+              <li class="navigation_item"><a href="catalog.html">Каталог</a>
+                <button class="btn_catalog_list" type="button"><img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог"></button>
+                  <ul class="catalog_link visually-hidden">
                     <li class="catalog_item">
                       <a><b>Новинки</b></a>
                     </li>
@@ -83,7 +84,7 @@
             <div class="substrate"></div>
             <img src="./images/strawberry_slide.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом">
           </li>
-          <li class="main_index_item slide2">
+          <li class="main_index_item slide2 visually-hidden">
             <h1>Сливочное мороженое<br>
               со вкусом банана</h1>
             <p>Сливочное мороженое с ярким банановым<br>
@@ -93,7 +94,7 @@
             <div class="substrate"></div>
             <img src="./images/banana_slide.png" width="306" height="507" alt="Сливочное мороженое со вкусом банана">
           </li>
-          <li class="main_index_item slide3">
+          <li class="main_index_item slide3 visually-hidden">
             <h1>Карамельный пломбир<br>
               с маршмеллоу</h1>
             <p>Необычный сладкий десерт с карамельным<br>
@@ -334,21 +335,21 @@
         </section>
         <section class="links">
           <h2 class="visually-hidden">Ссылки</h2>
-          <ul class="links_list">
-            <div class="column_1">
+          <div class="links_list">
+            <ul class=" column_1">
               <li class="links_item">
                 <img src="./images/heart.svg" alt="Вектор сердце">
               </li>
-            </div>
-            <div class="column_2">
+            </ul>
+            <ul class="column_2">
               <li class="links_item"><b>Для поставщиков</b></li>
               <li class="links_item">О производстве</li>
-            </div>
-            <div  class="column_3">
+            </ul>
+            <ul class="column_3">
               <li class="links_item">Наши документы</li>
               <li class="links_item">Экологические стандарты</li>
-           </div>
-          </ul>
+            </ul>
+          </div>
         </section>
         <section class="sources">
           <h2 class="visually-hidden">Источник</h2>
@@ -357,5 +358,7 @@
         </section>
       </div>
     </footer>
+    </div>
+
   </body>
 </html>

@@ -72,6 +72,12 @@ a {
   display: none;
 }
 
+.body_container {
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 /*ШАПКА САЙТА*/
 
 .navigation {
@@ -102,6 +108,19 @@ a {
   padding-left: 9px;
   padding-bottom: 2px;
 
+}
+
+.btn_catalog_list {
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  background-color: #FEAFC3;
+}
+
+.btn_catalog_list img {
+  padding: 0;
+  margin-bottom: 3px;
 }
 
 .navigation_user {
@@ -524,7 +543,6 @@ padding: 0;
   background-position: 50% 50%;
   display: flex;
   margin: 0 auto;
-  margin-bottom: 48px;
 }
 
 .contacts_form {
@@ -566,12 +584,14 @@ padding: 0;
 /*ФУТЕР САЙТА */
 
 .page-footer_container {
+  box-sizing: border-box;
   width: 1170px;
   height: 153px;
   display: flex;
   margin: 0 auto;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 48px;
 }
 
 .social_list{
@@ -592,14 +612,24 @@ padding: 0;
   display:flex;
   padding: 0;
   margin: 0 auto;
+
 }
 
 .column_1 {
+  padding: 0;
+  margin: 0;
   margin-right: 8px;
 }
 
 .column_2 {
+  padding: 0;
+  margin: 0;
   margin-right: 24px;
+}
+
+.column_3 {
+  padding: 0;
+  margin: 0;
 }
 
 .links_item {
@@ -622,6 +652,10 @@ padding: 0;
 .main_catalog {
   width: 1170px;
   margin: 0 auto;
+}
+
+.underline {
+  border-bottom: 1px solid #2D3440;
 }
 
 .inner_header{
@@ -746,6 +780,4 @@ padding: 0;
   width: 1170px;
   margin: 0 auto;
   height: 2px;
-  margin-bottom: 48px;
-
 }
