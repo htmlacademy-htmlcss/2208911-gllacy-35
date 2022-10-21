@@ -69,7 +69,14 @@ a {
   }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .body_container {
@@ -85,34 +92,52 @@ a {
   line-height: 20px;
   text-align: left;
   width: 1170px;
-  margin: 24px auto;
+  margin: 0 auto;
+  padding: 24px 0;
 }
 
 .navigation_list {
   display: flex;
   width: 680px;
+  min-height: 56px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .navigation_list .navigation_item {
   padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation_list .navigation_link {
+  display: block;
+  padding: 8px 16px;
+
+  /*
+  display: flex;
+  height: 36px;
+  align-items: center;
+  */
+}
+
+.navigation_list .navigation_link:first-child {
+  padding:0;
 }
 
 .navigation_list .navigation_item:first-child {
   margin-right: 16px;
   padding: 0;
 }
-.navigation_list img {
-  padding-left: 9px;
-  padding-bottom: 2px;
-
-}
 
 .btn_catalog_list {
   width: 16px;
   height: 16px;
+  margin-left: 6px;
+  margin-top: 3px;
   border: none;
   padding: 0;
   background-color: #FEAFC3;
@@ -131,8 +156,16 @@ a {
   padding: 0;
   margin-left: auto;
   list-style-type: none;
+  flex-wrap: wrap;
+  align-items: center;  /*почему то не работает...*/
+  margin-top: 12px;
   height: 32px;
   justify-content: flex-end;
+}
+
+.navigation_user .navigation_link {
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .navigation_user .number {
@@ -173,14 +206,6 @@ margin: 0 auto;
 padding: 0;
 }
 
-.substrate{
-  background-color: rgba(252, 252, 252, 0.3);
-  width: 312px;
-  height: 312px;
-  margin: 121px 0 0 12px;
-  border-radius: 50%;
-}
-
 .slider{
   text-align: left;
   margin-bottom: 80px;
@@ -189,6 +214,49 @@ padding: 0;
 .slider p {
   font-size: 18px;
   line-height: 24px;
+}
+
+.main_index_list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 136px 0 0 70px;
+}
+
+.main_index_item {
+  display: flex;
+  list-style-type: none;
+
+}
+
+.title_and_ice_cream {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.title_and_ice_cream h1,p {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.li_substrate_ice_cream {
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider_ice-cream {
+  margin-top: -100px;
+}
+
+.substrate{
+  background-color: rgba(252, 252, 252, 0.3);
+  width: 312px;
+  height: 312px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
 }
 
 .btn {
@@ -215,6 +283,13 @@ padding: 0;
 .slider .btn_white{
   width: 139px;
   height: 44px;
+  margin-top: 24px;
+}
+
+.btn_switch_slide {
+  background: none;
+  border: none;
+
 }
 
 .btn_radio_slide {
@@ -225,6 +300,15 @@ padding: 0;
   border-radius: 100px;
 }
 
+.radio_slide {
+  display: flex;
+  width: 50%;
+}
+
+.btn_radio_slide:not(:last-child) {
+  margin-right: 8px;
+}
+
 .active_radio_slide {
   background-color: #FCFCFC;
 }
@@ -232,12 +316,21 @@ padding: 0;
 .radio_slide_and_social {
   display: flex;
   width: 1170px;
-
+  align-items: flex-end;
 }
 
 .slider_social {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   justify-content: flex-end;
+  width: 50%;
+}
+
+.slider_social a {
+  display: block;
+  height: 24px;
+  margin-right: 16px;
 
 }
 
@@ -259,7 +352,7 @@ padding: 0;
 
 .banner {
   width: 570px;
-  height: 268px;
+  min-height: 268px;
   border-radius: 16px;
   background-color: #FF7799;
   display: flex;
@@ -267,7 +360,7 @@ padding: 0;
 
 .in_banner {
   width: 570px;
-  height: 268px;
+  min-height: 268px;
   border-radius: 16px;
 }
 
@@ -293,22 +386,29 @@ padding: 0;
   margin-bottom: 80px;
 }
 
+.flavors h2 {
+  margin: 0;
+  margin-bottom: 56px;
+}
+
 .ice_cream_list {
   display: flex;
   width: 1170px;
   padding: 0;
+  margin: 0;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .ice_cream_item {
   width: 270px;
-  height: 281px;
+  min-height: 281px;
   background-color: #FCFCFC;
   border-radius: 8px;
   text-align: center;
   margin: 0;
-  margin-bottom: 40px;
+  margin-top: 91px;
 }
 
 .ice_cream_item h4 {
@@ -317,6 +417,11 @@ padding: 0;
 
 .ice_cream_item p {
   margin: 0;
+}
+
+.ice_cream_item img {
+  margin-top: -51px;
+  border-radius: 50%;
 }
 
 .flavors_p_and_cart {
@@ -338,6 +443,10 @@ padding: 0;
   border-radius: 26px;
 }
 
+.btn_add_cart img {
+  margin: 0;
+}
+
 /*СЕКЦИЯ С ПРЕИМУЩЕСТВАМИ*/
 
 .advantage {
@@ -347,7 +456,7 @@ padding: 0;
 
 .advantage_wrapper {
    width: 1170px;
-   height: 480px;
+   min-height: 480px;
    background: url("../images/wafer_1.jpg") repeat;
    border-radius: 16px;
    margin:0 auto;
@@ -355,7 +464,7 @@ padding: 0;
 
 .advantage_list {
   width: 1122px;
-  height: 432px;
+  min-height: 432px;
   background-color: #fff;
   border-radius: 16px;
   padding-inline-start: 0;
@@ -399,34 +508,40 @@ padding: 0;
 
 }
 
-.news {
+.news_and_subscription_common {
   width: 570px;
-  height: 224px;
+  min-height: 224px;
+  border-radius: 16px;
+}
+
+.news {
   background: url("../images/serving.jpg") no-repeat;
   background-size: cover;
   background-position: 100% ;
-  border-radius: 16px;
 }
 
 .in_news {
   padding: 32px;
 }
+.in_news p {
+  margin-bottom: 12px;
+}
+
+.in_news h3 {
+  margin: 0;
+}
 
 .subscription_wrapper {
-  width: 570px;
-  height: 224px;
   background: url("../images/subs_1.jpg") no-repeat;
-  border-radius: 16px;
   display: flex;
 }
 
 .subscription {
   background-color: #fff;
   width: 558px;
-  height: 212px;
+  min-height: 212px;
   border-radius: 16px;
   margin: 6px auto;
-
 }
 
 .subscription p {
@@ -436,7 +551,7 @@ padding: 0;
 
 .subscription form {
   margin: 0;
-  padding: 18px 0 0 26px;
+  padding: 16px 0 0 26px;
 }
 
 .input {
@@ -456,7 +571,6 @@ padding: 0;
   width: 152px;
   height: 44px;
   margin-left: 18px;
-
 }
 
 /*СЕКЦИЯ С ДОСТАВКОЙ*/
@@ -487,36 +601,45 @@ padding: 0;
 
 .delivery_form {
   background-color: #fff;
-  width: 460px;
-  height: 366px;
+  width: 500px;
+  min-height: 406px;
   border-radius: 8px;
-  padding: 40px 0 0 40px;
-  margin: 64px 0 64px 135px;
+  padding: 40px;
+  margin: 64px;
+  margin-left: 135px;
+  box-sizing: border-box;
 }
 
 .date_and_phone {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .div_date {
   margin-right: 16px;
+  height: 76px;
+}
+
+.div_phone {
+  height: 76px;
 }
 
 .delivery_form p {
   margin: 0;
   margin-bottom: 32px;
 }
+.label_and_img {
+  margin-bottom: 8px;
+}
 
 .date {
   width: 99px;
   height: 46px;
-  margin-bottom: 20px;
 }
 
 .tel {
   width: 269px;
   height: 46px;
-  margin-bottom: 20px;
 }
 
 .address {
@@ -547,8 +670,9 @@ padding: 0;
 
 .contacts_form {
   background-color: #fff;
-  width: 303px;
-  height: 324px;
+  box-sizing: border-box;
+  width: 343px;
+  height: 364px;  /*min-height делает высоту на всю секцию...(*/
   border-radius: 8px;
   padding: 40px 0 0 40px;
   margin: 64px 0 0 64px;
@@ -596,8 +720,10 @@ padding: 0;
 
 .social_list{
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0 299px 81px 4px;
+  list-style-type: none;
 }
 
 .social_item{
@@ -612,24 +738,18 @@ padding: 0;
   display:flex;
   padding: 0;
   margin: 0 auto;
-
 }
-
-.column_1 {
+.column {
   padding: 0;
   margin: 0;
+  list-style-type: none;
+}
+.column_1 {
   margin-right: 8px;
 }
 
 .column_2 {
-  padding: 0;
-  margin: 0;
   margin-right: 24px;
-}
-
-.column_3 {
-  padding: 0;
-  margin: 0;
 }
 
 .links_item {
@@ -649,6 +769,8 @@ padding: 0;
 
 /*СТРАНИЦА КАТАЛОГА*/
 
+/*ХЛЕБНЫЕ КРОШКИ*/
+
 .main_catalog {
   width: 1170px;
   margin: 0 auto;
@@ -664,6 +786,8 @@ padding: 0;
 
 .inner_header_list {
   display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -679,16 +803,26 @@ padding: 0;
   margin: 0;
   margin-top: 16px;
 }
+
+/*СЕКЦИЯ С ФИЛЬТРАМИ*/
+
 .filters {
   margin-bottom: 44px;
 }
 .filters_flex_1 {
   display: flex;
+  margin-bottom: 16px;
 }
 
 .filters_fieldset{
+  margin: 0;
   margin-right: 24px;
   padding: 0;
+  border: none;
+}
+
+.filter_title {
+  display: none;
 }
 
 .filters_fieldset p {
@@ -707,12 +841,19 @@ padding: 0;
   height: 36px;
 }
 
+.filters_price {
+  box-sizing: border-box;
+  width: 196px;
+  height: 36px;
+}
+
 .filters_fat {
   display: flex;
   align-items: center;
   margin: 0;
   width: 367px;
   height: 36px;
+  list-style-type: none;
 }
 
 .filters_item {
@@ -724,6 +865,11 @@ padding: 0;
 }
 .filters_flex_2 {
   display: flex;
+  align-items: center;
+}
+
+.filters_flex_2 .filters_fieldset {
+  margin-right: 16px;
 }
 
 .filters_filler {
@@ -732,22 +878,35 @@ padding: 0;
   width: 588px;
   height: 40px;
   margin: 0;
+  list-style-type: none;
 }
 
 .filters_btn {
-  outline: 2px solid #fff;
+  box-sizing: border-box;
+  border: 2px solid #fff;
   width: 185px;
-  height: 36px;
+  height: 40px;
   font-weight: 700;
-  margin-top: 46px;
+  align-self: flex-end;
 }
 
+/*СЕКЦИЯ СО ВКУСАМИ*/
+
 .main_catalog .flavors{
-  margin-bottom: 57px;
+  margin-bottom: 16px;
 }
+
+.ice_cream_item:nth-child(1), .ice_cream_item:nth-child(2), .ice_cream_item:nth-child(3), .ice_cream_item:nth-child(4){
+  margin-top: 51px;
+}
+
+/*ПАГИНАЦИЯ*/
+
 .pagination_flex {
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  height: 126px;
+  align-items: center;
 }
 
 .pagination .btn_white {
@@ -758,9 +917,15 @@ padding: 0;
 
 .pagination_list {
   display: flex;
+  align-items: center;
   margin: 0;
   margin-left: 335px;
   padding: 0;
+  list-style-type: none;
+}
+
+.pagination_prev img, .pagination_next img{
+  margin-top: 5px;
 }
 
 .pagination_active {

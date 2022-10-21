@@ -10,65 +10,68 @@
     <div class="body_container">
     <header>
       <nav class="navigation">
-          <ul class="navigation_list">
-              <li class="navigation_item">
-                  <a class="navigation_link" href="index.html">
-                    <img class="logo" src="./images/header/logo.svg" width="137" height="56" alt="Логотип">
-                  </a>
-              </li>
-              <li class="navigation_item"><a href="catalog.html">Каталог</a>
-                <button class="btn_catalog_list" type="button"><img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог"></button>
-                  <ul class="catalog_link visually-hidden">
-                    <li class="catalog_item">
-                      <a><b>Новинки</b></a>
-                    </li>
-                    <li class="catalog_item_line"></li>
-                    <li class="catalog_item"><a href="catalog.html">Сливочное</a></li>
-                    <li class="catalog_item"><a href="#">Щербеты</a></li>
-                    <li class="catalog_item"><a href="#">Фруктовый лёд</a></li>
-                    <li class="catalog_item"><a href="#">Мелорин</a></li>
-                  </ul>
-              </li>
-              <li class="navigation_item">
-                <a class="navigation_link" href="shipping_payment.html">
-                  Доставка и оплата
-                </a>
-              </li>
-              <li class="navigation_item">
-                <a class="navigation_link" href="about_company">
-                  О компании
-                </a>
-            </li>
-          </ul>
-
-          <ul class="navigation_user">
+        <ul class="navigation_list">
             <li class="navigation_item">
-              <a class="navigation_link number" href="tel:78005558628">
-                7 800 555-86-28
+                <a class="navigation_link" href="index.html">
+                  <img class="logo" src="./images/header/logo.svg" width="137" height="56" alt="Логотип">
+                </a>
+            </li>
+            <li class="navigation_item">
+              <a class="navigation_link" href="catalog.html">Каталог</a>
+              <button class="btn_catalog_list" type="button">
+                <img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог">
+              </button>
+                <ul class="catalog_link visually-hidden">
+                  <li class="catalog_item">
+                    <a><b>Новинки</b></a>
+                  </li>
+                  <li class="catalog_item_line"></li>
+                  <li class="catalog_item"><a href="catalog.html">Сливочное</a></li>
+                  <li class="catalog_item"><a href="#">Щербеты</a></li>
+                  <li class="catalog_item"><a href="#">Фруктовый лёд</a></li>
+                  <li class="catalog_item"><a href="#">Мелорин</a></li>
+                </ul>
+            </li>
+            <li class="navigation_item">
+              <a class="navigation_link" href="shipping_payment.html">
+                Доставка и оплата
               </a>
             </li>
-            <li class="navigation_item item_background">
-              <a class="navigation_link search" href="#">
-                <span class="visually-hidden">
-                  Поиск
-                </span>
-                <img src="./images/header/search.svg" width="13" height="13" alt="Знак поиска">
-              </a>
-            </li>
-            <li class="navigation_item item_background">
-              <a class="navigation_link not_search" href="#">
-                <img src="./images/header/login.svg" width="13" height="13" alt="Знак входа в аккаунт">
-                Вход
-              </a>
-            </li>
-            <li class="navigation_item item_background">
-              <a class="navigation_link not_search" href="#">
-                <img src="./images/header/cart.svg" width="14" height="14" alt="Корзина">
-                2 товара
+            <li class="navigation_item">
+              <a class="navigation_link" href="about_company">
+                О компании
               </a>
           </li>
         </ul>
-      </nav>
+
+        <ul class="navigation_user">
+          <li class="navigation_item">
+            <a class="navigation_link number" href="tel:78005558628">
+              7 800 555-86-28
+            </a>
+          </li>
+          <li class="navigation_item item_background">
+            <a class="navigation_link search" href="#">
+              <span class="visually-hidden">
+                Поиск
+              </span>
+              <img src="./images/header/search.svg" width="13" height="13" alt="Знак поиска">
+            </a>
+          </li>
+          <li class="navigation_item item_background">
+            <a class="navigation_link not_search" href="#">
+              <img src="./images/header/login.svg" width="13" height="13" alt="Знак входа в аккаунт">
+              Вход
+            </a>
+          </li>
+          <li class="navigation_item item_background">
+            <a class="navigation_link not_search" href="#">
+              <img src="./images/header/cart.svg" width="14" height="14" alt="Корзина">
+              2 товара
+            </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
     <main class="main_catalog">
@@ -104,6 +107,9 @@
             <fieldset class="filters_fieldset">
               <legend class="filter_title">Цена</legend>
               <p>Цена: 100 ₽ – 500 ₽</p>
+              <div class="filters_back filters_price">
+
+              </div>
             </fieldset>
             <fieldset class="filters_fieldset">
               <legend class="filter_title">Жирность:</legend>
@@ -330,15 +336,15 @@
               </a>
             </li>
             <li class="pagination_item">
-              <div class="pagination_active">
                 <a class="pagination_link" href="#">1</a>
-              </div>
             </li>
             <li class="pagination_item">
               <a class="pagination_link" href="#">2</a>
             </li>
             <li class="pagination_item">
-              <a class="pagination_link" href="#">3</a>
+              <div class="pagination_active">
+                <a class="pagination_link" href="#">3</a>
+              </div>
             </li>
             <li class="pagination_item">
               <a class="pagination_link" href="#">4</a>
@@ -377,16 +383,16 @@
         <section class="links">
           <h2 class="visually-hidden">Ссылки</h2>
           <div class="links_list">
-            <ul class=" column_1">
+            <ul class="column column_1">
               <li class="links_item">
                 <img src="./images/heart.svg" alt="Вектор сердце">
               </li>
             </ul>
-            <ul class="column_2">
+            <ul class="column column_2">
               <li class="links_item"><b>Для поставщиков</b></li>
               <li class="links_item">О производстве</li>
             </ul>
-            <ul class="column_3">
+            <ul class="column column_3">
               <li class="links_item">Наши документы</li>
               <li class="links_item">Экологические стандарты</li>
             </ul>

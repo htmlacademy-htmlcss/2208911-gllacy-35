@@ -16,8 +16,11 @@
                     <img class="logo" src="./images/header/logo.svg" width="137" height="56" alt="Логотип">
                   </a>
               </li>
-              <li class="navigation_item"><a href="catalog.html">Каталог</a>
-                <button class="btn_catalog_list" type="button"><img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог"></button>
+              <li class="navigation_item">
+                <a class="navigation_link" href="catalog.html">Каталог</a>
+                <button class="btn_catalog_list" type="button">
+                  <img src="./images/header/catalog.svg" width="11" height="6" alt="Раскрыть каталог">
+                </button>
                   <ul class="catalog_link visually-hidden">
                     <li class="catalog_item">
                       <a><b>Новинки</b></a>
@@ -75,14 +78,30 @@
       <section class="slider">
         <ol class="main_index_list">
           <li class="main_index_item slide1 active_slide">
-            <h1>Нежный пломбир<br>
-              с клубничным джемом</h1>
-            <p>Натуральное мороженое из свежих сливок<br>
-            и молока с вкуснейшим клубничным джемом – <br>
-            это идеальный десерт для всей семьи. </p>
-            <button class="btn btn_white" type="button">Заказать</button>
-            <div class="substrate"></div>
-            <img src="./images/strawberry_slide.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом">
+            <ul class="title_and_ice_cream">
+              <li>
+                <h1>Нежный пломбир<br>
+                  с клубничным джемом</h1>
+                <p>Натуральное мороженое из свежих сливок<br>
+                и молока с вкуснейшим клубничным джемом – <br>
+                это идеальный десерт для всей семьи. </p>
+                <button class="btn btn_white" type="button">Заказать</button>
+              </li>
+              <li class="li_substrate_ice_cream">
+                <div class="substrate"></div>
+                <div class="switch_slide">
+                  <button type="button" class="btn_switch_slide prev">
+                    <img class="left_arrow" src="./images/arrow_left.svg" width="38" height="38" alt="Предыдущее мороженое">
+                  </button>
+                </div>
+                <img class="slider_ice-cream" src="./images/strawberry_slide.png" width="306" height="507" alt="Нежный пломбир с клубничным джемом">
+                <div class="switch_slide">
+                  <button type="button" class="btn_switch_slide next">
+                    <img class="right_arrow" src="./images/arrow_right.svg" width="38" height="38" alt="Следующее мороженое">
+                  </button>
+                </div>
+              </li>
+            </ul>
           </li>
           <li class="main_index_item slide2 visually-hidden">
             <h1>Сливочное мороженое<br>
@@ -105,20 +124,21 @@
             <img src="./images/caramel_slide.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу">
           </li>
         </ol>
+<!--
         <div class="switch_slide">
-          <button type="button" class="btn_switch_prev_slide">
+          <button type="button" class="btn_switch_slide prev">
             <img class="left_arrow" src="./images/arrow_left.svg" width="38" height="38" alt="Предыдущее мороженое">
           </button>
-          <button type="button" class="btn_switch_next_slide">
+          <button type="button" class="btn_switch_slide next">
             <img class="right_arrow" src="./images/arrow_right.svg" width="38" height="38" alt="Следующее мороженое">
           </button>
         </div>
-
+-->
         <div class="radio_slide_and_social">
           <div class="radio_slide">
-            <button type="button" class="btn_radio_slide active_radio_slide"></button>
-            <button type="button" class="btn_radio_slide"></button>
-            <button type="button" class="btn_radio_slide"></button>
+            <button class="btn_radio_slide active_radio_slide" type="button"></button>
+            <button class="btn_radio_slide" type="button"></button>
+            <button class="btn_radio_slide" type="button"></button>
           </div>
           <div class="slider_social">
                   <a href="https://t.me/htmlacademy"><img src="./images/social_network/telegram.png" width="24" height="24" alt="Телеграмм"></a>
@@ -247,7 +267,7 @@
       </section>
 
       <section class="news_and_subscription">
-        <div class="news">
+        <div class="news_and_subscription_common news">
 <!--        <h2 class="visually-hidden">Новости</h2>-->
             <div class="in_news">
               <p>Новое в нашем блоге</p>
@@ -256,7 +276,7 @@
               к столу</h3>
             </div>
         </div>
-        <div class="subscription_wrapper">
+        <div class="news_and_subscription_common subscription_wrapper">
           <div class="subscription">
   <!--      <h3 class="visually-hidden">Подписка</h3>-->
             <p>Подпишитесь на нашу сладкую рассылку и будьте всегда<br>
@@ -285,17 +305,23 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <div class="date_and_phone">
               <div class="div_date">
-                <label for="date">Дата</label>
-                <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
+                <div class="label_and_img">
+                  <label for="date">Дата</label>
+                  <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
+                </div>
                 <input class="input date" type="text" placeholder="01.04.2020" id="date" required>
               </div>
               <div class="div_phone">
-                <label for="phone">Телефон</label><br>
+                <div class="label_and_img">
+                  <label for="phone">Телефон</label><br>
+                </div>
                 <input class="input tel" type="tel" placeholder="+7 800 999-00-00" id="phone">
               </div>
             </div>
-            <label for="address">Адрес</label>
-            <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
+            <div class="label_and_img">
+              <label for="address">Адрес</label>
+              <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
+            </div>
             <input class="input address" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="address" required>
             <input class="btn btn_rose" type="submit" value="Отправить">
           </form>
@@ -336,16 +362,16 @@
         <section class="links">
           <h2 class="visually-hidden">Ссылки</h2>
           <div class="links_list">
-            <ul class=" column_1">
+            <ul class="column column_1">
               <li class="links_item">
                 <img src="./images/heart.svg" alt="Вектор сердце">
               </li>
             </ul>
-            <ul class="column_2">
+            <ul class="column column_2">
               <li class="links_item"><b>Для поставщиков</b></li>
               <li class="links_item">О производстве</li>
             </ul>
-            <ul class="column_3">
+            <ul class="column column_3">
               <li class="links_item">Наши документы</li>
               <li class="links_item">Экологические стандарты</li>
             </ul>
