@@ -392,12 +392,11 @@ padding: 0;
 }
 
 .ice_cream_list {
-  display: flex;
-  width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 40px 30px;
   padding: 0;
   margin: 0;
-  justify-content: space-between;
-  flex-wrap: wrap;
   list-style-type: none;
 }
 
@@ -408,7 +407,7 @@ padding: 0;
   border-radius: 8px;
   text-align: center;
   margin: 0;
-  margin-top: 91px;
+  margin-top: 51px;
 }
 
 .ice_cream_item h4 {
@@ -516,8 +515,8 @@ padding: 0;
 
 .news {
   background: url("../images/serving.jpg") no-repeat;
-  background-size: cover;
-  background-position: 100% ;
+  background-size: 650px auto;
+  background-position: right 94%  center;
 }
 
 .in_news {
@@ -588,7 +587,7 @@ padding: 0;
 }
 
 .delivery_text h2 {
-  margin: 0 0 24px 0;
+  margin-bottom: 0 0 24px 0;
   text-align: left;
   padding: 167px 0 0 100px;
 }
@@ -599,7 +598,7 @@ padding: 0;
   padding-left: 100px;
 }
 
-.delivery_form {
+.div_delivery_form {
   background-color: #fff;
   width: 500px;
   min-height: 406px;
@@ -610,49 +609,50 @@ padding: 0;
   box-sizing: border-box;
 }
 
-.date_and_phone {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.div_date {
-  margin-right: 16px;
-  height: 76px;
-}
-
-.div_phone {
-  height: 76px;
-}
-
-.delivery_form p {
-  margin: 0;
-  margin-bottom: 32px;
-}
-.label_and_img {
-  margin-bottom: 8px;
-}
-
-.date {
-  width: 99px;
-  height: 46px;
-}
-
-.tel {
-  width: 269px;
-  height: 46px;
-}
-
-.address {
-  width: 402px;
-  height: 46px;
+.div_delivery_form_p {
   margin-bottom: 32px;
 }
 
-.delivery_form  .btn_rose {
-  width: 152px;
+.delivery_form {
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 16px 20px;
+}
+
+.form-address {
+  grid-column: 1 / -1;
+}
+
+.btn_form {
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-width: 152px;
   height: 44px;
   padding: 0;
-  margin-left: 135px;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.field-group label,
+.field-group input {
+  display: block;
+}
+
+.field-group input {
+height: 48px;
+}
+
+.btn_info {
+  width: 13px;
+  height: 13px;
+  border: none;
+  background-color: white;
 }
 
 /*СЕКЦИЯ С КОНТАКТАМИ*/
@@ -894,10 +894,6 @@ padding: 0;
 
 .main_catalog .flavors{
   margin-bottom: 16px;
-}
-
-.ice_cream_item:nth-child(1), .ice_cream_item:nth-child(2), .ice_cream_item:nth-child(3), .ice_cream_item:nth-child(4){
-  margin-top: 51px;
 }
 
 /*ПАГИНАЦИЯ*/

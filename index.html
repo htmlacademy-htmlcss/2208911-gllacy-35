@@ -299,31 +299,37 @@
             доставку мороженого на дом, и курьер<br>
             привезёт вам ваш заказ в течение часа!</p>
         </div>
-        <div class="delivery_form">
-          <p>Укажите адрес и дату доставки, и мы свяжемся<br>
+        <div class="div_delivery_form">
+          <p class="div_delivery_form_p">Укажите адрес и дату доставки, и мы свяжемся<br>
             с вами, чтобы подтвердить заказ.</p>
-          <form action="https://echo.htmlacademy.ru/" method="post">
-            <div class="date_and_phone">
-              <div class="div_date">
-                <div class="label_and_img">
-                  <label for="date">Дата</label>
-                  <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
-                </div>
+          <form  class="delivery_form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="field-group form-date">
+                <label class="form-label" for="date">
+                  Дата
+                  <button class="btn_info">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                    <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения">
+                  </button>
+                </label>
                 <input class="input date" type="text" placeholder="01.04.2020" id="date" required>
-              </div>
-              <div class="div_phone">
-                <div class="label_and_img">
-                  <label for="phone">Телефон</label><br>
-                </div>
-                <input class="input tel" type="tel" placeholder="+7 800 999-00-00" id="phone">
-              </div>
-            </div>
-            <div class="label_and_img">
-              <label for="address">Адрес</label>
-              <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения"><br>
-            </div>
-            <input class="input address" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="address" required>
-            <input class="btn btn_rose" type="submit" value="Отправить">
+              </p>
+              <p class="field-group form-phone">
+                  <label class="form-label" for="phone">
+                    Телефон
+                  </label>
+                  <input class="input tel" type="tel" placeholder="+7 800 999-00-00" id="phone">
+              </p>
+              <p class="field-group form-address">
+                <label class="form-label" for="address">
+                  Адрес
+                  <button class="btn_info">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                    <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения">
+                  </button>
+                </label>
+                <input class="input address" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="address" required>
+              </p>
+            <input class="btn btn_rose btn_form" type="submit" value="Отправить">
           </form>
         </div>
       </section>
