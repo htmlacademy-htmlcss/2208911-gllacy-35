@@ -303,32 +303,36 @@
           <p class="div_delivery_form_p">Укажите адрес и дату доставки, и мы свяжемся<br>
             с вами, чтобы подтвердить заказ.</p>
           <form  class="delivery_form" action="https://echo.htmlacademy.ru/" method="post">
-              <p class="field-group form-date">
-                <label class="form-label" for="date">
-                  Дата
+              <div class="field-group form-date">
+                <div class="form_label_and_button">
+                  <label for="date">
+                    Дата
+                  </label>
                   <button class="btn_info">
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                     <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения">
                   </button>
-                </label>
+                </div>
                 <input class="input date" type="text" placeholder="01.04.2020" id="date" required>
-              </p>
+              </div>
               <p class="field-group form-phone">
-                  <label class="form-label" for="phone">
+                  <label for="phone">
                     Телефон
                   </label>
                   <input class="input tel" type="tel" placeholder="+7 800 999-00-00" id="phone">
               </p>
-              <p class="field-group form-address">
-                <label class="form-label" for="address">
-                  Адрес
+              <div class="field-group form-address">
+                <div class="form_label_and_button">
+                  <label for="address">
+                    Адрес
+                  </label>
                   <button class="btn_info">
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                     <img src="./images/required.svg" width="13" height="13" alt="Знак обязательного заполнения">
                   </button>
-                </label>
+                </div>
                 <input class="input address" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="address" required>
-              </p>
+              </div>
             <input class="btn btn_rose btn_form" type="submit" value="Отправить">
           </form>
         </div>

@@ -612,6 +612,9 @@ padding: 0;
 .div_delivery_form_p {
   margin-bottom: 32px;
 }
+.form-label_and_button{
+  display: flex;
+}
 
 .delivery_form {
   display: grid;
@@ -642,6 +645,10 @@ padding: 0;
 .field-group label,
 .field-group input {
   display: block;
+}
+
+.form_label_and_button {
+  display: flex;
 }
 
 .field-group input {
@@ -710,7 +717,7 @@ height: 48px;
 .page-footer_container {
   box-sizing: border-box;
   width: 1170px;
-  height: 153px;
+  min-height: 153px;
   display: flex;
   margin: 0 auto;
   font-size: 14px;
