@@ -336,21 +336,6 @@ padding: 0;
   min-width: 22px;
 }
 
-.arrow {
-  position: absolute;
-  top:0;
-  right: 0;
-  left:0;
-  bottom: 0;
-  margin: auto;
-  fill:#FCFCFC;
-}
-
-.btn_switch_slide:hover .arrow , .btn_switch_slide:active .arrow , .btn_switch_slide:focus-visible .arrow {
-  fill:#2D3440;
-}
-
-
 .btn_switch_slide {
   position: absolute;
   padding: 0;
@@ -377,6 +362,30 @@ padding: 0;
 .btn_switch_slide:focus-visible {
   background-color: rgba(252, 252, 252, 0.5);
   border: 2px solid #2D3440;
+}
+
+.btn_switch_slide:disabled {
+  background-color: rgba(252, 252, 252, 0.3);
+  opacity: 0.4;
+  border: 2px solid #FCFCFC;
+}
+
+.arrow {
+  position: absolute;
+  top:0;
+  right: 0;
+  left:0;
+  bottom: 0;
+  margin: auto;
+  fill:#FCFCFC;
+}
+
+.btn_switch_slide:hover .arrow , .btn_switch_slide:active .arrow , .btn_switch_slide:focus-visible .arrow {
+  fill:#2D3440;
+}
+
+.btn_switch_slide:disabled .arrow {
+  fill:#FCFCFC;
 }
 
 .next{
@@ -409,10 +418,17 @@ padding: 0;
   cursor: pointer;
 }
 
-.disubled {
+.disabled {
   /*так и не поняла какие сюда вносить стили пусть будет так*/
   opacity: 0.4;
+
 }
+
+.disabled.disabled_back {
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+
 
 .loading {                          /* тот самый класс, который отображает знак закрузки в кнопке, но не меняет цвет нигде) */
   display: none;
@@ -711,15 +727,6 @@ padding: 0;
   background-color:#FCFCFC;
 }
 
-.btn_add_cart:disabled {
-  border: none;
-  background-color: #B9B9B9;
-}
-
-.btn_add_cart:hover .flavors_cart , .btn_add_cart:active .flavors_cart , .btn_add_cart:disabled .flavors_cart {
-  fill:#2D3440;
-}
-
 .btn_add_cart:active {
   border: 2px solid #FF2F64;
   background-color: #FFCBD8;
@@ -727,6 +734,15 @@ padding: 0;
 
 .btn_add_cart:focus-visible {
   border: 2px solid #2D3440;
+}
+
+.btn_add_cart:disabled {
+  border: none;
+  background-color: #B9B9B9;
+}
+
+.btn_add_cart:hover .flavors_cart , .btn_add_cart:active .flavors_cart , .btn_add_cart:disabled .flavors_cart {
+  fill:#2D3440;
 }
 
 .flavors_cart{
@@ -882,7 +898,7 @@ padding: 0;
 .delivery_wrapper {
   width: 1170px;
   height: 534px;
-  background: url("../images/delivery2.jpg") no-repeat;
+  background: url("../images/delivery.jpg") no-repeat;
   border-radius: 16px;
   background-position: center;
   background-size: cover;
@@ -1305,9 +1321,9 @@ height: 48px;
 }
 
 .pagination_prev_next {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .line {
