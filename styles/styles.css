@@ -200,10 +200,8 @@ a {
   width: 490px;
   font-size: 14px;
   padding: 0;
-  margin-left: auto;
   list-style-type: none;
   flex-wrap: wrap;
-  align-items: center;  /*почему то не работает...*/
   margin: 12px 0 12px -1px;
   height: 32px;
   justify-content: flex-end;
@@ -267,11 +265,10 @@ a {
   min-height: 156px;
   box-sizing: border-box;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
-  display: none;
 }
 
-.popover-open {                         /*класс, который отображает поповеры*/
-  display: block;
+.popover-close {                         /*класс, который прячет поповеры*/
+  display: none;
 }
 
 .popover-catalog {
@@ -341,9 +338,16 @@ a {
   padding: 24px 16px;
 }
 
-.popover-search .input{      /*не уверена в состояниях данного инпута*/
+.popover-search .input{
   width: 324px;
   min-height: 48px;
+}
+
+.popover .input {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .popover .input::placeholder {
@@ -351,6 +355,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  color: #2D3440;
 }
 
 .popover-search .input::placeholder {
@@ -368,7 +373,7 @@ a {
 }
 
 .popover-login .password::placeholder {
-  font-size: 28px;
+  font-size: 16px;
 }
 
 .popover-login .btn_rose {
@@ -1626,15 +1631,15 @@ height: 48px;
   margin-left: auto;
 }
 
-.slide1 {
+.back-pink {
   background-color: #FEAFC3;
 }
 
-.slide2 {
+.back-blue {
   background-color: #69A9FF;
 }
 
-.slide3 {
+.back-yellow {
   background-color: #FCC850;
 }
 
@@ -1869,11 +1874,11 @@ height: 48px;
 }
 
 .toggle-min {
-  top:-8px;
+  top:-7px;
 }
 
 .toggle-max {
-  top:-8px;
+  top:-7px;
   left: 72px;
 }
 
@@ -2010,13 +2015,13 @@ height: 48px;
   color:#2D3440;
 }
 
-.filters_btn:hover {                                /*отображает не тот цвет бордера в браузере*/
+.filters_btn:hover {
   background-color: #FCFCFC;
-  border: 2px solid rgba(252, 252, 252, 0.3);
+  border: 2px solid  #FFCBD8;
 }
 
-.filters_btn:active {                                /*отображает не тот цвет бордера в браузере*/
-  border: 2px solid rgba(252, 252, 252, 0.5);
+.filters_btn:active {
+  border: none;
   background-color: rgba(252, 252, 252, 0.5);
 }
 
