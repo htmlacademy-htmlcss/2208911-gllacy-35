@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="back-pink">
@@ -171,16 +172,14 @@
         <h1 class="visually-hidden">Каталог</h1>
         <ul class="inner_header_list">
           <li class="inner_header_item">
-            <a href="index.html">Главная</a>
+            <a class="inner_header_item_a" href="index.html">Главная</a>
           </li>
           <li class="inner_header_item">
-            <img src="./images/path.svg" width="12" height="12" alt="Вектор вправо">
+            <a class="inner_header_item_a" href="#">Каталог</a>
           </li>
-          <li class="inner_header_item"><a href="#">Каталог</a></li>
-          <li class="inner_header_item">
-            <img src="./images/path.svg" width="12" height="12" alt="Вектор вправо">
+          <li class="inner_header_item underline">
+            <a class="inner_header_item_a" href="catalog.html">Сливочное мороженое</a>
           </li>
-          <li class="inner_header_item underline"><a href="catalog.html">Сливочное мороженое</a></li>
         </ul>
         <h1 class="inner_header_title">Сливочное мороженое</h1>
       </header>
@@ -193,7 +192,7 @@
               <legend class="filter_title">Сортировка:</legend>
               <p>Сортировка:</p>
               <div class="select sorting-type">
-              <select class="select-control" name="sorting_name">
+              <select class="select-control font-size" name="sorting_name">
                 <option value="popular">по популярности</option>
               </select>
               </div>
@@ -477,7 +476,7 @@
               <p>Фисташковый пломбир<br>
                 с шоколадным сиропом</p>
               <div class="flavors_p_and_cart">
-                <p class="flavors_p_padding">270 ₽/кг</p>
+                <p class="flavors_p_padding">360 ₽/кг</p>
                 <button class="btn_add_cart" type="button">
                   <svg class="flavors_cart" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 1.25C0.798477 1.25 0.5 1.54848 0.5 1.91667C0.5 2.28486 0.798477 2.58333 1.16667 2.58333H2.93794L3.40537 4.91872C3.40821 4.93667 3.41176 4.95438 3.416 4.97182L4.38338 9.80515L4.3835 9.80571C4.46706 10.2257 4.69562 10.603 5.02921 10.8715C5.36111 11.1387 5.77595 11.2813 6.20183 11.2748H11.8225C12.2484 11.2813 12.6633 11.1387 12.9952 10.8715C13.3289 10.6029 13.5575 10.2254 13.641 9.80515L13.641 9.80515L13.642 9.80016L14.5691 4.93872C14.6063 4.74355 14.5545 4.54195 14.4279 4.38887C14.3012 4.23578 14.1129 4.14716 13.9142 4.14716H4.61072L4.1381 1.78583C4.07574 1.47426 3.80215 1.25 3.4844 1.25H1.16667ZM5.69098 9.54444L4.87759 5.4805H13.1084L12.3328 9.54736C12.31 9.65988 12.2485 9.7609 12.1591 9.83291C12.0691 9.90535 11.9565 9.94383 11.841 9.94162L11.841 9.94149H11.8282H6.19614V9.94137L6.18337 9.94162C6.06787 9.94383 5.95528 9.90535 5.8653 9.83291C5.77531 9.76048 5.71368 9.6587 5.69117 9.5454L5.69098 9.54444ZM4.55739 13.5054C4.55739 12.8175 5.1151 12.2597 5.80307 12.2597C6.49105 12.2597 7.04876 12.8175 7.04876 13.5054C7.04876 14.1934 6.49105 14.7511 5.80307 14.7511C5.1151 14.7511 4.55739 14.1934 4.55739 13.5054ZM10.9307 13.5054C10.9307 12.8175 11.4884 12.2597 12.1764 12.2597C12.8644 12.2597 13.4221 12.8175 13.4221 13.5054C13.4221 14.1934 12.8644 14.7511 12.1764 14.7511C11.4884 14.7511 10.9307 14.1934 10.9307 13.5054Z" />
@@ -505,6 +504,7 @@
       <section class="pagination">
         <h2 class="visually-hidden">Пагинация</h2>
         <div class="pagination_flex">
+          <div class="div-pagination-btn">
           <button class="btn btn_white" type="button">Показать ещё
             <span class="loading loading-none">
               <svg class="spinner" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -512,10 +512,12 @@
               </svg>
             </span>
           </button>
+          </div>
+          <div class="div-pagination-list">
           <ul class="pagination_list">
             <li class="pagination_item">
-              <a class="pagination_link pagination_prev_next pagination_prev" href="#">
-                <img src="./images/page_prev.svg" width="16" height="16" alt="Предыдущая страница">
+              <a class="pagination_link" href="#">
+                <img  class="pagination_prev" src="./images/page_prev.svg" width="16" height="16" alt="Предыдущая страница">
               </a>
             </li>
             <li class="pagination_item">
@@ -536,11 +538,12 @@
               <a class="pagination_link" href="#">5</a>
             </li>
             <li class="pagination_item">
-              <a class="pagination_link pagination_prev_next pagination_next" href="#">
-                <img src="./images/page_next.svg" width="16" height="16" alt="Следующая страница">
+              <a class="pagination_link" href="#">
+                <img class="pagination_next" src="./images/page_next.svg" width="16" height="16" alt="Следующая страница">
               </a>
             </li>
           </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -589,8 +592,8 @@
         </section>
         <section class="sources">
           <h2 class="visually-hidden">Источник</h2>
-          <a href="https://htmlacademy.ru/"><img src="./images/logo_htmlacademy.svg" width="93" height="27" alt="Логотип_Академии"></a>
-          <p>Сделано в <a href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
+          <a class="focus-academy" href="https://htmlacademy.ru/"><img src="./images/logo_htmlacademy.svg" width="93" height="27" alt="Логотип_Академии"></a>
+          <p>Сделано в <a class="a_academy focus-academy" href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
         </section>
       </div>
     </footer>
