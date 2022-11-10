@@ -82,6 +82,7 @@ a {
 
 .body_container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   flex-grow: 1;
 }
@@ -95,6 +96,7 @@ img {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   line-height: 20px;
   text-align: left;
   width: 1170px;
@@ -104,18 +106,19 @@ img {
 
 .navigation_list {
   display: flex;
+  flex-wrap: wrap;
   width: 680px;
   min-height: 56px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .navigation_item {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-radius: 30px;
 }
@@ -262,6 +265,7 @@ img {
 
 .btn {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-radius: 26px;
@@ -306,7 +310,7 @@ img {
   font-weight: 400;
 }
 
-.btn_rose .loading {                          /* тот самый класс, который отображает знак закрузки в кнопке) */
+.btn_rose .loading {                          /* класс, который отображает знак закрузки в кнопке */
   display: block;
   background-color: none;
   position: relative;
@@ -363,6 +367,7 @@ img {
   height: 32px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -400,7 +405,6 @@ img {
 }
 
 [type="search"]::-webkit-search-cancel-button {
-  /* -webkit-appearance: none; */
   appearance: none;
   height: 16px;
   width: 16px;
@@ -715,6 +719,7 @@ img {
 
 .main_index_item {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
 }
 
@@ -724,10 +729,12 @@ img {
 
 .active_slide {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .title_and_ice_cream {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
 }
@@ -742,6 +749,7 @@ p {
   margin-left: 44px;
   margin-top: -16px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -899,7 +907,7 @@ p {
   font-weight: 400;
 }
 
-.btn_white .loading {                          /* тот самый класс, который отображает знак закрузки в кнопке) */
+.btn_white .loading {                          /* класс, который отображает знак закрузки в кнопке */
   display: block;
   background-color: none;
   position: relative;
@@ -971,6 +979,7 @@ p {
 
 .radio_slide_and_social {
   display: flex;
+  flex-wrap: wrap;
   width: 1170px;
   align-items: flex-end;
   height: 28px;
@@ -983,7 +992,6 @@ p {
 }
 
 .slider_social_slider {
-  margin-left: auto;
   justify-content: flex-end;
   width: 50%;
 }
@@ -1052,6 +1060,7 @@ p {
 
 .bounty_display {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1061,6 +1070,7 @@ p {
   border-radius: 16px;
   background-color: #ff7799;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .in_banner {
@@ -1079,6 +1089,7 @@ p {
 
 .padding_bounty p {
   margin-bottom: 28px;
+  padding-right: 215px;
 }
 
 .banner_2 {
@@ -1191,12 +1202,13 @@ p {
 .advantage {
   margin-bottom: 80px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .advantage_wrapper {
   width: 1170px;
   min-height: 480px;
-  background: url("../images/wafer_1.jpg") repeat;
+  background: url("../images/wafer.jpg") repeat;
   border-radius: 16px;
   margin: 0 auto;
 }
@@ -1223,6 +1235,7 @@ p {
 
 .advantage_item {
   display: flex;
+  flex-wrap: wrap;
   width: 506px;
   height: 66px;
   margin: 0 32px 40px 0;
@@ -1239,6 +1252,7 @@ p {
 .news_and_subscription {
   margin-bottom: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1250,6 +1264,7 @@ p {
 
 .news {
   background: url("../images/serving.jpg") no-repeat;
+  background-color: #ffffff;
   background-size: 650px auto;
   background-position: right 94%  center;
 }
@@ -1267,7 +1282,7 @@ p {
 }
 
 .subscription_wrapper {
-  background: url("../images/subs_1.jpg") no-repeat;
+  background: url("../images/subs.jpg") no-repeat;
   display: flex;
 }
 
@@ -1306,8 +1321,9 @@ p {
   width: 1170px;
   min-height: 534px;
   background: url("../images/delivery.jpg") no-repeat;
+  background-color: #f5f5f5;
   border-radius: 16px;
-  background-position: center;                                /*неправильная*/
+  background-position: center top;
   background-size: cover;
   margin: 0 auto;
   margin-bottom: 80px;
@@ -1379,14 +1395,8 @@ p {
   margin: 0;
 }
 
-.field-group label,
-.field-group input {
-  display: block;
-}
-
 .form_label_and_button {
   position: relative;
-  display: flex;
   margin-bottom: 6px;
   padding-right: 16px;
 }
@@ -1395,10 +1405,10 @@ p {
   height: 48px;
 }
 
-.tooltip-date {   /*блок на переполнение НЕ работает, так как задан фиксированный отступ слева (как сделать относительно лейбла отступ не знаю)*/
+.tooltip-date {
   position: absolute;
   margin-top: 3px;
-  margin-left: 44px;
+  margin-left: 5px;
   width: 14px;
   height: 14px;
 }
@@ -1406,7 +1416,7 @@ p {
 .tooltip-address {
   position: absolute;
   margin-top: 3px;
-  margin-left: 56px;
+  margin-left: 5px;
   width: 14px;
   height: 14px;
 }
@@ -1519,6 +1529,7 @@ p {
   width: 1170px;
   min-height: 153px;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   font-size: 14px;
   line-height: 20px;
@@ -1533,6 +1544,7 @@ p {
 
 .links_list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0 auto;
   width: 356px;
@@ -1579,6 +1591,7 @@ p {
   top: 0;
   left: 0;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   background-color: rgba(36, 36, 36, 0.3);
@@ -1731,6 +1744,7 @@ p {
 
 .filters_flex_1 {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 
@@ -1761,6 +1775,7 @@ p {
 .select {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-width: 196px;
   min-height: 36px;
@@ -1779,7 +1794,6 @@ p {
   background-image: url("../images/header/catalog.svg");
   background-repeat: no-repeat;
   background-position: right 16px center;
-  /* -webkit-appearance: none; */
   appearance: none;
 }
 
@@ -1920,9 +1934,10 @@ p {
 
 .filters_fat {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
-  min-width: 383px;
+  width: 383px;
   min-height: 36px;
   box-sizing: border-box;
   list-style-type: none;
@@ -1946,6 +1961,7 @@ p {
 .control-mark {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -1961,7 +1977,7 @@ p {
   border-color: #fcfcfc;
 }
 
-.control-input:focus-visible + .control-mark {       /*надо ли? если да, то норм, что в жирности фокус усnанавливается только на том, у которого checked*/
+.control-input:focus-visible + .control-mark {
   box-shadow: 0 0 0 1px #2d3440;
 }
 
@@ -1991,6 +2007,7 @@ p {
 
 .filters_flex_2 {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -2000,8 +2017,9 @@ p {
 
 .filters_filler {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  min-width: 604px;
+  width: 604px;
   min-height: 40px;
   margin: 0;
   list-style-type: none;
@@ -2087,6 +2105,7 @@ p {
 
 .pagination_flex {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
   min-height: 126px;
   align-items: center;
@@ -2099,6 +2118,7 @@ p {
 
 .div-pagination-btn {
   display: flex;
+  flex-wrap: wrap;
   width: 666px;
   justify-content: end;
 }
@@ -2112,6 +2132,7 @@ p {
 
 .pagination_list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -2129,6 +2150,7 @@ p {
 
 .pagination_link {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: none;
