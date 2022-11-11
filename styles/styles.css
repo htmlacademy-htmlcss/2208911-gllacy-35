@@ -87,7 +87,7 @@ a {
   flex-grow: 1;
 }
 
-img {
+img:not(.slider_ice-cream_light) {
   max-width: 100%;
   object-fit: contain;
 }
@@ -310,7 +310,7 @@ img {
   font-weight: 400;
 }
 
-.btn_rose .loading {                          /* класс, который отображает знак закрузки в кнопке */
+.btn_rose .loading {                          /* класс, который отображает знак закрузки в розовой кнопке */
   display: block;
   background-color: none;
   position: relative;
@@ -773,7 +773,7 @@ p {
 }
 
 .substrate {
-  background-color: rgba(252, 252, 252, 0.3);
+  background-color: #ffcbd8;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
@@ -907,7 +907,7 @@ p {
   font-weight: 400;
 }
 
-.btn_white .loading {                          /* класс, который отображает знак закрузки в кнопке */
+.btn_white .loading {                          /* класс, который отображает знак закрузки в белой кнопке */
   display: block;
   background-color: none;
   position: relative;
@@ -1574,7 +1574,7 @@ p {
 }
 
 .sources {
-  padding-left: 200px;
+  padding-left: 198px;
   box-sizing: border-box;
   width: 405px;
 }
@@ -1584,6 +1584,10 @@ p {
   margin-top: 10px;
   font-size: 12px;
   line-height: 16px;
+}
+
+.a_academy {
+  border-bottom: 1px solid #2d3440;
 }
 
 .modal-container {
@@ -1793,7 +1797,7 @@ p {
   border-radius: 20px;
   background-image: url("../images/header/catalog.svg");
   background-repeat: no-repeat;
-  background-position: right 16px center;
+  background-position: right 13px center;
   appearance: none;
 }
 
@@ -1945,7 +1949,7 @@ p {
 }
 
 .filters_item {
-  margin-right: 16px;
+  margin-right: 17px;
 }
 
 .filters_item:last-child {
@@ -2194,5 +2198,5 @@ p {
   background-color: rgba(252, 252, 252, 0.3);
   width: 1170px;
   margin: 0 auto;
-  height: 2px;
+  height: 1px;
 }
