@@ -780,7 +780,7 @@ p {
 }
 
 .substrate {
-  background-color: #ffcbd8;
+  background-color: rgba(252, 252, 252, 0.35);
   border-radius: 50%;
   position: absolute;
   z-index: -1;
@@ -1242,9 +1242,8 @@ p {
 
 .advantage_item {
   display: flex;
-  flex-wrap: wrap;
   width: 506px;
-  height: 66px;
+  min-height: 66px;
   margin: 0 32px 40px 0;
 }
 
@@ -1489,6 +1488,7 @@ p {
   width: 1170px;
   min-height: 492px;
   background: url("../images/feedback.jpg") no-repeat;
+  background-color: #eadfdd;
   border-radius: 16px;
   background-size: cover;
   background-position: 50% 50%;
@@ -1893,6 +1893,8 @@ p {
 
 .range-bar {
   position: absolute;
+  left: 24px;
+  width: 72px;
   height: 2px;
   background-color: #565c66;
 }
