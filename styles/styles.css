@@ -131,18 +131,6 @@ img:not(.slider_ice-cream_light) {
   border-radius: 30px;
 }
 
-.navigation_link_logo {
-  padding: 0;
-  display: block;
-  height: 56px;
-}
-
-.navigation_link_logo:focus-visible {
-  box-shadow: inset 0 0 0 2px #2d3440;
-  outline: none;
-  border-radius: 30px;
-}
-
 .navigation_list .navigation_item:first-child {
   margin-right: 16px;
 }
@@ -152,6 +140,11 @@ img:not(.slider_ice-cream_light) {
   position: relative;
   border-radius: 30px;
   height: 16px;
+}
+
+.navigation_list .navigation_link_logo {
+  padding: 0;
+  height: 56px;
 }
 
 .navigation_link:hover {
