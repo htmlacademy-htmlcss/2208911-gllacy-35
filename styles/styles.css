@@ -1655,7 +1655,13 @@ p {
 .links a:active,
 .sources a:active {
   background-color: rgb(252, 252, 252);
-  width: fit-content;
+}
+
+.links a:focus-visible,
+.sources a:focus-visible {
+  outline: none;
+  background-color: rgb(252, 252, 252, 0.5);
+  box-shadow: inset 0 0 0 1px #2d3440;
 }
 
 .modal-container {
@@ -1787,19 +1793,39 @@ p {
 }
 
 .inner_header_item {
-  margin-right: 28px;
+  margin-right: 22px;
   position: relative;
 }
 
+.inner_header_item_a {
+  display: block;
+  position: relative;
+  border-radius: 30px;
+  padding: 0 3px;
+}
+
+.inner_header_item:first-child .inner_header_item_a {
+  padding-left: 0;
+}
+
+.inner_header_item_a:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+.inner_header_item_a:active {
+  background-color: rgb(252, 252, 252);
+}
+
 .inner_header_item_a:focus-visible {
-  box-shadow: inset 0 0 0 2px #2d3440;
+  background-color: rgba(252, 252, 252, 0.5);
+  box-shadow: inset 0 0 0 1px #2d3440;
   outline: none;
 }
 
 .inner_header_item:not(:last-child)::after {
   position: absolute;
   top: 5px;
-  right: -21px;
+  right: -18px;
   width: 12px;
   height: 12px;
   background-image: url("../images/path.svg");
