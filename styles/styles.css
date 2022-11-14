@@ -34,15 +34,14 @@ body {
   line-height: 22px;
   color: #2d3440;
   margin: 0 auto;
-  min-width: 1170px;
-  padding: 0 98px 0 98px;
-  background-color: #feafc3;
 }
 
-h1 {
+.slider h2 {
   font-weight: 900;
   font-size: 36px;
   line-height: 46px;
+  text-align: start;
+  margin: 0;
 }
 
 h2 {
@@ -53,12 +52,6 @@ h2 {
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-}
-
-h4 {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -85,6 +78,8 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   flex-grow: 1;
+  min-width: 1170px;
+  padding: 0 98px 0 98px;
 }
 
 img:not(.slider_ice-cream_light) {
@@ -106,20 +101,33 @@ img:not(.slider_ice-cream_light) {
 
 .navigation_list {
   display: flex;
-  flex-wrap: wrap;
   width: 680px;
   min-height: 56px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 471px;
+  padding: 0;
+  margin: 12px 0;
+  list-style-type: none;
 }
 
 .navigation_item {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  border-radius: 30px;
+}
+
+.navigation_item_li {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 30px;
 }
 
@@ -143,6 +151,7 @@ img:not(.slider_ice-cream_light) {
   display: block;
   position: relative;
   border-radius: 30px;
+  height: 16px;
 }
 
 .navigation_link:hover {
@@ -179,11 +188,9 @@ img:not(.slider_ice-cream_light) {
   fill: #fcfcfc;
 }
 
-
-.navigation_list .navigation-active-class svg {
+.navigation-active-class svg {
   transform: rotate(180deg);
 }
-
 
 .navigation_link_padding {
   padding: 8px 16px;
@@ -210,14 +217,14 @@ img:not(.slider_ice-cream_light) {
 
 .navigation_user {
   display: flex;
-  width: 490px;
+  flex-wrap: wrap;
+  width: 433px;
   font-size: 14px;
   padding: 0;
   list-style-type: none;
-  flex-wrap: wrap;
   margin: 12px 0 12px -1px;
-  height: 32px;
-  justify-content: flex-end;
+  min-height: 32px;
+  margin-left: auto;
 }
 
 .navigation_user .navigation_link {
@@ -225,7 +232,7 @@ img:not(.slider_ice-cream_light) {
   box-sizing: border-box;
   position: relative;
   min-width: 32px;
-  min-height: 32px;
+  height: 32px;
   border-radius: 30px;
 }
 
@@ -242,7 +249,7 @@ img:not(.slider_ice-cream_light) {
   margin-right: 16px;
 }
 
-.navigation_user .navigation_item:last-child {
+.navigation_user .navigation_item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -423,7 +430,7 @@ img:not(.slider_ice-cream_light) {
   border-radius: 4px;
   background-color: #ffffff;
   border: 1px solid #b9b9b9;
-  padding: 0 16px;
+  padding: 0 15px;
   box-sizing: border-box;
 }
 
@@ -442,6 +449,12 @@ img:not(.slider_ice-cream_light) {
 
 .input:focus-visible {
   border: 2px solid #2d3440;
+  padding: 14px;
+}
+
+.input:focus-visible:focus {
+  border: 2px solid #2d3440;
+  padding: 14px;
 }
 
 .input:disabled {
@@ -469,6 +482,7 @@ img:not(.slider_ice-cream_light) {
 
 .input:invalid:hover {
   border: 2px solid #ea5454;
+  padding: 0 14px;
 }
 
 .popover-search .input {
@@ -746,7 +760,7 @@ img:not(.slider_ice-cream_light) {
   padding: 0;
 }
 
-.title_and_ice_cream h1,
+.title_and_ice_cream h2,
 p {
   margin: 0;
   margin-bottom: 24px;
@@ -773,17 +787,19 @@ p {
 .slider_ice-cream {
   margin-top: -100px;
   margin-left: -4px;
+  z-index: 1;
 }
 
 .slider_ice-cream_light {
   margin-top: -24px;
+  z-index: 1;
 }
 
 .substrate {
   background-color: rgba(252, 252, 252, 0.35);
   border-radius: 50%;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 
 .substrate_original {
@@ -1058,6 +1074,9 @@ p {
 .bounty h3 {
   margin: 0;
   margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .bounty .btn_white {
@@ -1078,29 +1097,25 @@ p {
   background-color: #ff7799;
   display: flex;
   flex-wrap: wrap;
+  padding: 36px 0 36px 36px;
+  box-sizing: border-box;
 }
 
-.in_banner {
-  width: 570px;
-  min-height: 268px;
-  border-radius: 16px;
-}
-
-.banner_1 {
-  background: url("../images/raspberry_gift.png") no-repeat 100% 0;
-}
-
-.padding_bounty {
-  padding: 36px 0 28px 36px;
-}
-
-.padding_bounty p {
+.banner p {
   margin-bottom: 28px;
   padding-right: 215px;
 }
 
+.banner_1 {
+  background-image: url("../images/raspberry_gift.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
 .banner_2 {
-  background: url("../images/marshmallow_gift.png") no-repeat 100% 0;
+  background-image: url("../images/marshmallow_gift.png");
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 /*СЕКЦИЯ С ПОПУЛЯРНЫМИ ВКУСАМИ*/
@@ -1133,7 +1148,7 @@ p {
   margin-top: 51px;
 }
 
-.ice_cream_item h4 {
+.ice_cream_item h3 {
   margin: 16px 0 8px 0;
   font-size: 20px;
   line-height: 24px;
@@ -1247,10 +1262,34 @@ p {
   margin: 0 32px 40px 0;
 }
 
+.advantage_item::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.advantage_item:nth-child(1)::before {
+  background-image: url("../images/advantage/ice_cream.svg");
+}
+
+.advantage_item:nth-child(2)::before {
+  background-image: url("../images/advantage/cow.svg");
+}
+
+.advantage_item:nth-child(3)::before {
+  background-image: url("../images/advantage/leaf.svg");
+}
+
+.advantage_item:nth-child(4)::before {
+  background-image: url("../images/advantage/degree.svg");
+}
+
 .advantage_item p {
   margin: 0;
-  margin-left: 16px;
   align-self: flex-start;
+  padding-left: 64px;
 }
 
 /*СЕКЦИЯ С НОВОСТЯМИ И РАССЫЛКОЙ*/
@@ -1276,7 +1315,7 @@ p {
 }
 
 .in_news {
-  padding: 32px;
+  padding: 32px 230px 32px 32px;
 }
 
 .in_news p {
@@ -1284,6 +1323,8 @@ p {
 }
 
 .in_news h3 {
+  font-size: 24px;
+  line-height: 30px;
   margin: 0;
 }
 
@@ -1338,28 +1379,29 @@ p {
 
 .delivery_text {
   width: 471px;
+  margin: 64px;
+  margin-left: 100px;
 }
 
 .delivery_text h2 {
   margin: 0 0 24px 0;
   text-align: left;
-  padding: 167px 0 0 100px;
+  padding-top: 103px;
 }
 
 .delivery_text p {
   margin: 0;
   text-align: left;
-  padding-left: 100px;
 }
 
 .div_delivery_form {
   background-color: #fcfcfc;
   width: 500px;
-  min-height: 406px;
+  height: fit-content;
   border-radius: 8px;
   padding: 40px;
   margin: 64px;
-  margin-left: 135px;
+  margin-left: 71px;
   box-sizing: border-box;
 }
 
@@ -1540,7 +1582,7 @@ p {
   margin: 0 auto;
   font-size: 14px;
   line-height: 20px;
-  padding-top: 48px;
+  padding: 48px 0;
 }
 
 .slider_social_footer {
@@ -1549,52 +1591,78 @@ p {
   width: 407px;
 }
 
-.links_list {
-  display: flex;
-  flex-wrap: wrap;
+.column {
   padding: 0;
   margin: 0 auto;
   width: 356px;
-}
-
-.column {
-  padding: 0;
-  margin: 0;
+  position: relative;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 132px 188px;
+  gap: 4px 18px;
+  padding-left: 19px;
 }
 
-.column_1 {
-  margin-right: 8px;
-}
-
-.column_1 .links_item {
-  margin-left: -1px;
-  margin-top: 1px;
-}
-
-.column_2 {
-  margin-right: 24px;
+.column::before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/heart.svg");
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  left: -1px;
+  top: 2px;
 }
 
 .links_item {
-  margin-bottom: 8px;
+  margin-right: 0;
+  height: 24px;
 }
 
 .sources {
-  padding-left: 198px;
+  padding-left: 180px;
   box-sizing: border-box;
-  width: 405px;
+  width: 383px;
 }
 
 .sources p {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 9px;
   font-size: 12px;
   line-height: 16px;
+  display: flex;
 }
 
 .a_academy {
   border-bottom: 1px solid #2d3440;
+}
+
+.links a,
+.sources a {
+  border-radius: 16px;
+  display: block;
+  height: 100%;
+  width: fit-content;
+  padding: 0 3px;
+}
+
+.sources a {
+  margin: -3px;
+  height: fit-content;
+  padding: 3px;
+}
+
+.links a:hover,
+.sources a:hover {
+  background-color: rgba(252, 252, 252, 0.25);
+  width: fit-content;
+}
+
+.links a:active,
+.sources a:active {
+  background-color: rgb(252, 252, 252);
+  width: fit-content;
 }
 
 .modal-container {
@@ -1746,6 +1814,7 @@ p {
 }
 
 .inner_header_title {
+  text-align: start;
   margin: 0;
   margin-top: 16px;
   font-family: "Inter", sans-serif;
@@ -1776,10 +1845,6 @@ p {
 }
 
 .filter_title {
-  display: none;
-}
-
-.filters_fieldset p {
   margin: 0;
   margin-bottom: 8px;
   padding-left: 16px;
@@ -1843,14 +1908,12 @@ p {
   font-size: 14px;
   line-height: 20px;
   font-family: "Inter", sans-serif;
-}
-
-.label_price_min {
-  margin-left: 1px;
+  margin-left: 2px;
 }
 
 .dash {
-  margin-left: 4px;
+  margin-left: 6px;
+  margin-top: -2px;
   font-size: 14px;
   line-height: 20px;
   font-family: "Inter", sans-serif;
